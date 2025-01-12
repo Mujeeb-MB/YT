@@ -1,26 +1,29 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AwsPage from "./pages/AwsPage";
+import CssPage from "./pages/CssPage";
+import DsaPage from "./pages/DsaPage";
+import GitPage from "./pages/GitPage";
+import HtmlPage from "./pages/HtmlPage";
+import InterviewPage from "./pages/InterviewPage";
+import JavaScriptPage from "./pages/JavaScriptPage";
+import ReactPage from "./pages/ReactPage";
 
 function App() {
-  const openInNewTab = () => {
-    const url =
-      "https://www.youtube.com/embed/JKccS9k56_I?si=Bx-Kstup48bnj52I&autoplay=1&fs=1";
-    window.open(url, "_blank");
-  };
-
   return (
-    <>
-      <h1>hello</h1>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/JKccS9k56_I?si=Bx-Kstup48bnj52I"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-      ></iframe>
-      <button onClick={openInNewTab}>Open Fullscreen in New Tab</button>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aws" element={<AwsPage />} />
+        <Route path="/css" element={<CssPage />} />
+        <Route path="/dsa" element={<DsaPage />} />
+        <Route path="/git" element={<GitPage />} />
+        <Route path="/html" element={<HtmlPage />} />
+        <Route path="/interview" element={<InterviewPage />} />
+        <Route path="/javascript" element={<JavaScriptPage />} />
+        <Route path="/react" element={<ReactPage />} />
+      </Routes>
+    </Router>
   );
 }
 
