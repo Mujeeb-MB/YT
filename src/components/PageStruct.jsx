@@ -20,7 +20,7 @@ const PageStruct = ({ sources }) => {
       >
         Learning Resources
       </Typography>
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center" mb={5}>
         {sources.map((source, i) => (
           <Grid key={i} size={{ xs: 12, md: 4 }}>
             <Card
@@ -37,6 +37,9 @@ const PageStruct = ({ sources }) => {
             >
               <CardContent sx={{ textAlign: "center", margin: "auto" }}>
                 <Typography variant="h6">{source.name}</Typography>
+                <Typography variant="subtitle2" sx={{ mt: 2 }}>
+                  {source?.description}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
