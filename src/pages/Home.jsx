@@ -14,6 +14,8 @@ const Home = () => {
     { name: "Interview", path: "/interview" },
     { name: "JavaScript", path: "/javascript" },
     { name: "React", path: "/react" },
+    { name: "Projects", path: "/projects" },
+    { name: "FreecodeCamp", path: "/freecodecamp" },
   ];
 
   return (

@@ -8,6 +8,8 @@ import HtmlPage from "./pages/HtmlPage";
 import InterviewPage from "./pages/InterviewPage";
 import JavaScriptPage from "./pages/JavaScriptPage";
 import ReactPage from "./pages/ReactPage";
+import ProjectPage from "./pages/ProjectPage";
+import FreeCodeCampPage from "./pages/FreeCodeCampPage";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/interview" element={<InterviewPage />} />
         <Route path="/javascript" element={<JavaScriptPage />} />
         <Route path="/react" element={<ReactPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/freecodecamp" element={<FreeCodeCampPage />} />
       </Routes>
     </Router>
   );
